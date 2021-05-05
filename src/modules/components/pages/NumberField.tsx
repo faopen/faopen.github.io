@@ -1,4 +1,3 @@
-import React from "react";
 import { NumberField, INumberFieldProps } from "@faharmony/form";
 import { Box } from "@faharmony/theme";
 import { Text } from "@faharmony/components";

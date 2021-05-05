@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import { PageView, SummaryView } from "@faharmony/views";
 import { Button, Tag } from "@faharmony/components";
 
@@ -14,7 +14,7 @@ const code = `// Example
 `;
 
 const Page = () => {
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = useState(true);
   return (
     <PageView
       caption="Components"

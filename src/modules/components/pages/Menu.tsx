@@ -1,10 +1,10 @@
-import React from "react";
+import { useState, useMemo } from "react";
 import { Menu, IMenuPrimaryItem } from "@faharmony/navigation";
 import { IIconButtonObject } from "@faharmony/components";
 import { faPlus, faSync } from "@faharmony/icons";
 
 const Page = () => {
-  const [selectedId, setSelectedId] = React.useState<string>("");
+  const [selectedId, setSelectedId] = useState<string>("");
 
   const actions: IIconButtonObject[] = [
     {
@@ -21,7 +21,7 @@ const Page = () => {
     },
   ];
 
-  const menu: IMenuPrimaryItem[] = React.useMemo(
+  const menu: IMenuPrimaryItem[] = useMemo(
     () => [
       {
         id: "item1",

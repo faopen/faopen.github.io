@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Form,
   useForm,
@@ -47,17 +46,12 @@ const FormNode = () => {
         <FormControl label="Date">
           <DatePicker
             name="testDate"
-            enabledDates={enabledDates}
+            includeDates={enabledDates}
             onChange={console.log}
           />
         </FormControl>
         <FormControl label="Date (disabled)">
-          <DatePicker
-            name="realDate"
-            onChange={console.log}
-            defaultValue={new Date()}
-            disabled
-          />
+          <DatePicker name="realDate" onChange={console.log} disabled />
         </FormControl>
         <Box>
           <FormControl label="Toggle (enabled)">
@@ -103,21 +97,11 @@ const Page = () => (
     <FormNode />
     <Box style={{ width: "200px" }}>
       <FormControl label="Date (readonly)">
-        <DatePicker
-          name="realDate"
-          onChange={console.log}
-          value={new Date()}
-          readonly
-        />
+        <DatePicker name="realDate" onChange={console.log} readOnly />
       </FormControl>
 
       <InfoBox field="Date (readonly)">
-        <DatePicker
-          name="realDate"
-          onChange={console.log}
-          value={new Date()}
-          readonly
-        />
+        <DatePicker name="realDate" onChange={console.log} readOnly />
       </InfoBox>
     </Box>
   </PageView>

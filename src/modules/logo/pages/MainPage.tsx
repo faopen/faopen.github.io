@@ -1,5 +1,4 @@
 // {{Sample}}:MainView
-import React from "react";
 import { PageView, PrimaryWithSidebarLayout } from "@faharmony/views";
 import { useModuleTranslation } from "@faharmony/module";
 import { Box } from "@faharmony/theme";

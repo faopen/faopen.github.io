@@ -1,4 +1,4 @@
-import React from "react";
+import { useState, useMemo } from "react";
 import { PageView } from "@faharmony/views";
 import { Table } from "@faharmony/table";
 import { useTimeout } from "@faharmony/helpers";
@@ -12,10 +12,10 @@ interface IDataProps {
 }
 
 const TableView = () => {
-  const [showContent, setShowContent] = React.useState(false);
+  const [showContent, setShowContent] = useState(false);
   useTimeout(() => setShowContent(true), 1000);
 
-  const tableData: IDataProps[] = React.useMemo(
+  const tableData: IDataProps[] = useMemo(
     () =>
       showContent
         ? [
@@ -50,7 +50,7 @@ const TableView = () => {
     [showContent]
   );
 
-  const tableColumns: any[] = React.useMemo(
+  const tableColumns: any[] = useMemo(
     () => [
       {
         accessor: "name",
@@ -98,7 +98,7 @@ const TableView = () => {
       enableFiltering
       enablePagination
       enableMultipleRowSelect
-      enableColumnVisibilitySelector
+      columnVisibilitySelector={{ handleChange: console.log }}
       exportTable
       isLoading={!showContent}
     />
