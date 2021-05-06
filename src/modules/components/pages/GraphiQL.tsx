@@ -3,7 +3,7 @@ import { GraphiQL } from "@faharmony/editor";
 
 const Page = () => (
   <PageView heading="GraphiQl">
-    <GraphiQL enableExplorer={false} />
+    <GraphiQL />
   </PageView>
 );
 

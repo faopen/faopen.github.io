@@ -36,4 +36,5 @@ export const components = [
   "Table",
   "Tabs",
   "Tags",
+  "GraphQLPlayground",
 ];
